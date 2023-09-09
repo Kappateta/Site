@@ -1,0 +1,16 @@
+*{
+  background-color: #090521 ;
+}
+
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  color: aliceblue;
+  font-size: 140px;
+  text-align: center;
+  margin: 0  ;
+  padding: 0;
+}
+
+.div-title {
+  text-align: center;
+}
