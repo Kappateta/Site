@@ -4,8 +4,10 @@ import {
   Heading,
   Stack,
   Grid,
-  GridItem 
+  GridItem,
+  Center,
 } from '@chakra-ui/react'
+
 
 function Site() {
     return (
@@ -17,14 +19,17 @@ function Site() {
         gridTemplateColumns={'300px 1fr'}
         h='650px'
         gap='1'
-        color='blackAlpha.700'
+        color='black.700'
         fontWeight='bold'
       >
         <GridItem pl='2' bg='orange.300' area={'header'}>
-          Header
+        <Center bg='orange.300' h='30px' color='Black' marginTop={3} fontSize={30}>
+          Uplays
+        </Center>
+
         </GridItem>
-        <GridItem pl='2' bg='pink.300' area={'nav'}>
-          Nav
+        <GridItem pl='2' bg='yellow.300' area={'nav'}>
+          Menu
         </GridItem>
         <GridItem pl='2' bg='green.300' area={'main'}>
           Main
