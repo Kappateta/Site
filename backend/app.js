@@ -3,8 +3,8 @@ const express = require("express");
 var fs = require("fs");
 
 const PORT = process.env.PORT || 3001;
-
 const app = express();
+var users;
 
 async function save(user) {
   try {
@@ -14,13 +14,8 @@ async function save(user) {
     }
 }
 
-getUser(function (err, content) {
-  console.log(content)
-})
 
-let users
-
-function listAllUsers() {
+function getUsers() {
   dbFile = "./db/user.json"
   fs.readFile(dbFile, function read(err, data) {
     if (err) {
@@ -28,12 +23,12 @@ function listAllUsers() {
     }
     users = JSON.parse(data.toString());
   });
-  //console.log("users: " + users)
 }
 
+
 app.get("/users", (req, res) => {
-    listAllUsers()
-    console.log("user: ", users)
+    getUsers()
+    console.log("users: ", users)
     res.json(users);
 });
 
